@@ -63,7 +63,7 @@
         "xr": {
           "xrCameraType": "world",
           "phone": "AR",
-          "desktop": "3D",
+          "desktop": "disabled",
           "headset": "disabled",
           "world": {
             "disableWorldTracking": true

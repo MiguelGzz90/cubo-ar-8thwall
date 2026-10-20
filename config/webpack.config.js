@@ -24,7 +24,7 @@ const makeAssetLoader = () => ({
 const config = {
   entry: './entry.js',
   output: {
-    filename: 'bundle.js',
+    filename: 'bundle.[contenthash].js',
     path: distPath,
     publicPath: './',
   },

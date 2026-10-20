@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#111d32">
+  <title>Cubo AR · 8th Wall</title>
+  <meta name="description" content="Descubre un cubo en realidad aumentada al apuntar a la tarjeta Cubo AR.">
+  <style>
+    *{box-sizing:border-box}body{margin:0;font-family:system-ui,sans-serif;color:#fff;background:#111d32}
+    .brand{position:fixed;top:max(18px,env(safe-area-inset-top));left:20px;z-index:20;pointer-events:none;letter-spacing:.2em;font-size:12px;font-weight:750;background:#111d32dd;padding:12px 16px;border-radius:14px}
+    .hud{position:fixed;z-index:20;bottom:max(18px,env(safe-area-inset-bottom));left:16px;right:16px;max-width:520px;margin:auto;padding:17px 18px;border:1px solid #ffffff30;border-radius:22px;background:#111d32eb;box-shadow:0 8px 35px #0004}
+    .eyebrow{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#8ddcea;margin:0 0 7px}
+    #tracking-status{font-size:15px;line-height:1.45;margin:0 0 13px}#tracking-status[data-found=true]{color:#a7f3d0}
+    button,a{font:inherit}button{cursor:pointer}#marker-button{border:1px solid #ffffff40;color:#fff;background:transparent;padding:9px 14px;border-radius:10px;font-size:13px}
+    dialog{max-width:min(92vw,420px);max-height:90dvh;overflow:auto;border:0;border-radius:22px;padding:20px;background:#fff;color:#111d32}dialog::backdrop{background:#000b}dialog img{width:100%;display:block;border-radius:12px}dialog h2{margin:0 0 8px;font-size:22px}dialog p{font-size:14px;line-height:1.5}dialog a{color:#087f98}#close-marker{display:block;margin:16px 0 0 auto;padding:9px 16px;background:#111d32;color:white;border:0;border-radius:10px}
+  </style>
+  <script crossorigin="anonymous" src="./external/runtime/runtime.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@8thwall/engine-binary@1/dist/xr.js" async crossorigin="anonymous" data-preload-chunks="slam"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@8thwall/landing-page@1/dist/landing-page.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="brand">CUBO / AR</div>
+  <section class="hud" aria-label="Ayuda de realidad aumentada">
+    <p class="eyebrow">Explora otra dimensión</p>
+    <p id="tracking-status" role="status" aria-live="polite">Permite el acceso a la cámara y apunta a la tarjeta Cubo AR.</p>
+    <button id="marker-button" type="button">Ver tarjeta de referencia</button>
+  </section>
+  <dialog id="marker-dialog">
+    <h2>Tu marcador</h2>
+    <p>Imprime esta tarjeta o muéstrala en otra pantalla. Apunta a la tarjeta completa, incluidos los bordes de color.</p>
+    <img src="./assets/marcador-cubo.png" alt="Tarjeta Cubo AR con un código QR y figuras de colores">
+    <p><a href="./assets/marcador-cubo.png" download="marcador-cubo.png">Descargar tarjeta</a></p>
+    <button id="close-marker" type="button">Volver a la cámara</button>
+  </dialog>
+  <script src="bundle.js"></script>
+</body>
+</html>

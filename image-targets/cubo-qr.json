@@ -1,0 +1,24 @@
+{
+  "imagePath": "image-targets/cubo-qr_luminance.png",
+  "metadata": null,
+  "name": "cubo-qr",
+  "type": "PLANAR",
+  "properties": {
+    "top": 0,
+    "left": 0,
+    "width": 960,
+    "height": 1280,
+    "isRotated": false,
+    "originalWidth": 960,
+    "originalHeight": 1280
+  },
+  "resources": {
+    "originalImage": "cubo-qr_original.png",
+    "croppedImage": "cubo-qr_cropped.png",
+    "thumbnailImage": "cubo-qr_thumbnail.png",
+    "luminanceImage": "cubo-qr_luminance.png"
+  },
+  "created": 1792455586291,
+  "updated": 1792455586291,
+  "loadAutomatically": true
+}
